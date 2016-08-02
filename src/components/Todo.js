@@ -8,6 +8,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { connect } from 'react-redux';
 
 const dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
@@ -90,4 +91,4 @@ class Todo extends Component {
     }
 }
 
-module.exports = Todo;
+module.exports = connect(mapStateToProps) (Todo);
