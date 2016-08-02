@@ -77,7 +77,9 @@ class Todo extends Component {
 
     renderRow(rowData) {
         return (
-            <TouchableHighlight onPress={() => {}}>
+            <TouchableHighlight onPress={() => {
+                this.props.actions.removeToDo(rowData.id);
+            }}>
                 <Text>{rowData.text}</Text>
             </TouchableHighlight>
         );
