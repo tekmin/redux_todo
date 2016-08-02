@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state, ownProps) {
     return {
-        todos: state.todos,
+        todos: dataSource.cloneWithRows(state.todos),
     };
 }
 
