@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
     },
 });
 
+function mapStateToProps(state, ownProps) {
+    return {};
+}
+
 class Todo extends Component {
 
     constructor(props) {
