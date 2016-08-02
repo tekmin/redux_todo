@@ -8,6 +8,11 @@ function TodoReducers(previousState = [], action) {
                     text: action.text,
                 }
             ];
+
+        case 'REMOVE_TODO':
+            return previousState.filter((todo) => {
+                return todo.id !== action.id
+            });
         
         default:
             return previousState;
