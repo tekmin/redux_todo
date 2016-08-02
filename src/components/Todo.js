@@ -32,7 +32,9 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state, ownProps) {
-    return {};
+    return {
+        todos: state.todos,
+    };
 }
 
 class Todo extends Component {
