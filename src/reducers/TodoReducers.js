@@ -8,6 +8,9 @@ function TodoReducers(previousState = [], action) {
                     text: action.text,
                 }
             ];
+        
+        default:
+            return previousState;
     }
 }
 
