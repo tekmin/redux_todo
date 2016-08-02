@@ -7,3 +7,10 @@ export function addToDo(text) {
         text,
     }
 }
+
+export function removeToDo(id) {
+    return {
+        type: 'REMOVE_TODO',
+        id: id,
+    }
+}
