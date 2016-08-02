@@ -9,7 +9,8 @@ import {
     View,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { addToDo } from './../actions/TodoActions';
+import * as TodoActions from './../actions/TodoActions';
+import { bindActionCreators } from 'redux';
 
 const dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
@@ -36,6 +37,12 @@ const styles = StyleSheet.create({
 function mapStateToProps(state, ownProps) {
     return {
         todos: dataSource.cloneWithRows(state.todos),
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(TodoActions, dispatch)
     };
 }
 
