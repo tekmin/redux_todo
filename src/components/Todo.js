@@ -67,7 +67,7 @@ class Todo extends Component {
     }
 
     save() {
-        this.props.dispatch(addToDo(this.state.text));
+        this.props.actions.addToDo(this.state.text);
 
         // clear input
         this.setState({
