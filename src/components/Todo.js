@@ -9,6 +9,7 @@ import {
     View,
 } from 'react-native';
 import { connect } from 'react-redux';
+import { addToDo } from './../actions/TodoActions';
 
 const dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
@@ -59,6 +60,12 @@ class Todo extends Component {
     }
 
     save() {
+        this.props.dispatch(addToDo(this.state.text));
+
+        // clear input
+        this.setState({
+            text: '',
+        });
     }
 
     renderRow(rowData) {
