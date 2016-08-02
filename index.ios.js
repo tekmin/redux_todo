@@ -9,6 +9,10 @@ import {
   AppRegistry,
 } from 'react-native';
 import Todo from './src/components/Todo';
+import { createStore } from 'redux';
+import RootReducers from './src/reducers/RootReducers';
+
+let store = createStore(RootReducers);
 
 class ReduxTodo extends Component {
   render() {
