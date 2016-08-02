@@ -89,7 +89,7 @@ class Todo extends Component {
                 </TouchableOpacity>
                 <Text>To Do List</Text>
                 <ListView 
-                    dataSource={dataSource.cloneWithRows([])}
+                    dataSource={this.props.todos}
                     renderRow={this.renderRow}
                     enableEmptySections={true}
                 />
