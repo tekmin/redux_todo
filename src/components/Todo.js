@@ -105,4 +105,4 @@ class Todo extends Component {
     }
 }
 
-module.exports = connect(mapStateToProps) (Todo);
+module.exports = connect(mapStateToProps, mapDispatchToProps) (Todo);
